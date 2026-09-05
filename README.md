@@ -107,8 +107,6 @@ Search the file for `TODO`.
 - [ ] **Cabins** — the park plans to add cabins. Nothing on the site mentions them yet. When
       they're close, the cleanest move is probably a second page rather than diluting this one,
       since "Wickfield RV Park" is specifically the RV side of the business.
-- [ ] **Site specs** — exact length and width, and the surface (gravel or concrete). The page
-      states full hookups at every site but no dimensions.
 - [ ] **Opening date** — the page says "Opening soon" with no date. Add one when you have it, and
       flip `bookingOpen` when reservations open.
 
