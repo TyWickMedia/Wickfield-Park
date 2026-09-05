@@ -1,8 +1,11 @@
-# Wickfield Park — Website
+# Wickfield RV Park — Website
 
-Marketing site for **Wickfield Park**, an RV park at 1919 N Jardot Rd, Stillwater, OK.
+Marketing site for **Wickfield RV Park**, at 1919 N Jardot Rd, Stillwater, OK.
 
-11 oversized pull-through sites · free 50 amp electric · free WiFi · dog park · chipping green ·
+The design mirrors the park's entry sign: dark pine field, bone and rust palette, heavy woodtype
+slab headings, condensed gothic labels, solid pictograms and a drawn prairie horizon.
+
+11 oversized pull-through sites · full hookups (water, sewer, 50 amp) · free WiFi · dog park · chipping green ·
 $60 a night · $250 a week · $500 a month · reservations through Firefly.
 
 ## Stack
@@ -20,18 +23,31 @@ python3 -m http.server 8000    # then visit http://localhost:8000
 ```
 index.html                    the main site
 before-you-book.html          the acknowledgement gate every booking click passes through
-assets/logo.svg               primary horizontal lockup (dark, for light backgrounds)
-assets/logo-reversed.svg      same lockup in cream, for dark backgrounds
-assets/logo-mark.svg          the "field" mark on its own — favicon, profile pictures
-assets/logo-badge.svg         alternate: the horizon roundel, for signage and merch
-assets/logo-wordmark.svg      alternate: wordmark with horizon rule, no mark
-assets/og-card.png            1200×630 share card for Facebook / texts / link previews
-assets/fonts/                 Bitter + Inter, self-hosted (82 KB total)
+assets/logo.svg               WICKFIELD / RV PARK lockup, dark — for light backgrounds
+assets/logo-reversed.svg      same lockup in bone — for dark backgrounds
+assets/logo-mark.svg          the field mark alone — favicon and profile pictures
+assets/og-card.png            1200×630 share card, built as the entry sign
+assets/fonts/                 Alfa Slab One + Oswald + Inter, self-hosted (~89 KB)
 robots.txt / sitemap.xml      basic SEO files
 ```
 
-The header and footer logos are inlined directly in `index.html` (so they pick up the webfont).
-If you change the logo, update those two inline `<svg>` blocks as well as the files above.
+The header and footer logos are inlined directly in the HTML so the wordmark renders in Alfa Slab
+One. The standalone `.svg` files fall back to Georgia on machines without that font — fine for
+reference, but have the wordmark converted to outlines before sending it to a printer.
+
+### Design tokens
+
+Set once at the top of the stylesheet in `:root`, all sampled from the sign:
+
+| token | value | used for |
+|---|---|---|
+| `--pine` / `--pine-dk` | `#2F3C2C` / `#202A1F` | dark bands, hero, footer |
+| `--rust` / `--rust-lt` / `--brick` | `#B8571F` / `#C86A2A` | buttons, labels, accents |
+| `--bone` / `--paper` / `--tan` | `#E7DFC6` / `#F2EAD6` / `#E4D9BC` | text on dark, page, alternate bands |
+| `--sage` / `--olive` | `#5C7048` / `#8A8B4E` | the drawn landscape |
+
+Type: **Alfa Slab One** for headlines and the wordmark, **Oswald** for labels, buttons and nav,
+**Inter** for body copy. A faint paper-grain overlay sits on `body::after`.
 
 ## The day you open: flip one switch
 
@@ -85,11 +101,14 @@ Search the file for `TODO`.
 - [ ] **Test the contact form** — it posts to Formspree form `xppzrglw`. Formspree needs you to
       confirm the first submission from a new form, so send yourself a test message once the site is
       on a real domain. With the park pre-opening, every call-to-action leads here.
-- [ ] **Photos** — the site is deliberately photo-free for now (drawn horizons and icons instead).
-      When photos exist, the natural slots are the hero background, the illustrated panel in
+- [ ] **Photos** — the site is deliberately photo-free (drawn prairie scenes and solid pictograms
+      instead). When photos exist, the natural slots are behind the hero, the illustrated panel in
       "Built for big rigs", and a new gallery section.
-- [ ] **Site specs** — exact length/width, surface, and whether water & sewer are at every site.
-      The page currently claims electric and WiFi only.
+- [ ] **Cabins** — the park plans to add cabins. Nothing on the site mentions them yet. When
+      they're close, the cleanest move is probably a second page rather than diluting this one,
+      since "Wickfield RV Park" is specifically the RV side of the business.
+- [ ] **Site specs** — exact length and width, and the surface (gravel or concrete). The page
+      states full hookups at every site but no dimensions.
 - [ ] **Opening date** — the page says "Opening soon" with no date. Add one when you have it, and
       flip `bookingOpen` when reservations open.
 
