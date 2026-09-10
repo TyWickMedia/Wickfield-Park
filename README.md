@@ -23,6 +23,7 @@ python3 -m http.server 8000    # then visit http://localhost:8000
 ```
 index.html                    the main site
 before-you-book.html          the acknowledgement gate every booking click passes through
+policies.html                 full park policies (has a print stylesheet for posting in the office)
 assets/logo.svg               WICKFIELD / RV PARK lockup, dark — for light backgrounds
 assets/logo-reversed.svg      same lockup in bone — for dark backgrounds
 assets/logo-mark.svg          the field mark alone — favicon and profile pictures

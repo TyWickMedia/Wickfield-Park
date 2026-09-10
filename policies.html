@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Park Policies | Wickfield RV Park</title>
+  <meta name="description" content="Park policies for Wickfield RV Park in Stillwater, OK — quiet hours, speed limit, pets, site rules, the aerobic septic system, trash, safety and check-in times.">
+  <link rel="canonical" href="https://wickfieldpark.com/policies.html">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2F3C2C">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <style>
+    @font-face{font-family:'Alfa';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/alfaslab.woff2') format('woff2')}
+    @font-face{font-family:'Oswald';font-style:normal;font-weight:200 700;font-display:swap;src:url('assets/fonts/oswald-var.woff2') format('woff2')}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url('assets/fonts/inter-var.woff2') format('woff2')}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --pine:#2F3C2C;--pine-dk:#202A1F;--sage:#5C7048;--rust:#B8571F;--rust-lt:#C86A2A;
+      --brick:#8B4A21;--bone:#E7DFC6;--bone-dim:#C3BBA0;--paper:#F2EAD6;--tan:#E4D9BC;
+      --ink:#23291F;--mid:#5E6553;--line:#DBCEAF;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+    body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.05;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E")}
+    svg{display:block}
+    h1,h2{font-family:'Alfa',Georgia,serif;font-weight:400;line-height:1.14;text-transform:uppercase}
+    h3{font-family:'Oswald',sans-serif;font-weight:600}
+
+    header{background:var(--paper);border-bottom:3px solid var(--pine);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand svg{height:58px;width:auto}
+    .back{font-family:'Oswald',sans-serif;font-size:14px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);text-decoration:none}
+    .back:hover{color:var(--rust)}
+
+    .masthead{background:var(--pine);color:var(--bone-dim);padding:56px 40px 52px;border-bottom:3px solid var(--rust)}
+    .masthead-inner{max-width:860px;margin:0 auto}
+    .eyebrow{font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--rust-lt);margin-bottom:14px}
+    h1{font-size:clamp(30px,4.6vw,46px);color:var(--bone);margin-bottom:16px}
+    .masthead p{font-size:18px;max-width:640px}
+
+    main{max-width:860px;margin:0 auto;padding:16px 40px 90px}
+
+    /* contents */
+    .toc{display:flex;flex-wrap:wrap;gap:9px;margin:38px 0 8px}
+    .toc a{font-family:'Oswald',sans-serif;font-size:12.5px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;
+      color:var(--pine);text-decoration:none;border:1.5px solid var(--line);background:var(--tan);padding:7px 13px;border-radius:2px}
+    .toc a:hover{border-color:var(--rust);color:var(--rust)}
+
+    section{padding-top:46px}
+    h2{font-size:clamp(22px,2.7vw,29px);color:var(--pine);margin-bottom:6px}
+    .sect-note{color:var(--mid);font-size:16px;margin-bottom:20px;max-width:640px}
+    ol.rules{list-style:none;counter-reset:r}
+    ol.rules>li{counter-increment:r;position:relative;padding:15px 0 15px 48px;border-bottom:1px solid var(--line);font-size:16.5px;color:var(--ink)}
+    ol.rules>li::before{content:counter(r,decimal-leading-zero);position:absolute;left:0;top:16px;
+      font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--rust)}
+    ol.rules>li b{font-weight:600}
+    ol.rules>li span{display:block;color:var(--mid);font-size:15px;margin-top:3px}
+
+    .notice{display:flex;gap:22px;align-items:flex-start;background:#F6E8CC;border:2px solid #D9B87C;border-left:6px solid var(--rust);border-radius:3px;padding:26px 28px;margin-bottom:22px}
+    .notice-ico{flex:0 0 auto;width:42px;height:42px;fill:var(--rust)}
+    .notice h3{font-size:18px;letter-spacing:.05em;text-transform:uppercase;color:var(--pine);margin-bottom:9px}
+    .notice p{font-size:15.5px;color:#4A5142;line-height:1.6}
+    .notice p+p{margin-top:10px}
+    .notice strong{color:var(--pine)}
+
+    .closing{margin-top:52px;background:var(--pine);border-radius:4px;padding:34px 34px;color:var(--bone-dim)}
+    .closing h2{color:var(--bone);font-size:24px;margin-bottom:12px}
+    .closing p{font-size:16px}
+    .closing p+p{margin-top:12px}
+    .closing a{color:var(--rust-lt);font-weight:600;text-decoration:none}
+    .updated{margin-top:26px;font-family:'Oswald',sans-serif;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:#8B9280;text-align:center}
+
+    footer{background:var(--pine-dk);color:#8F9683;padding:34px 40px;text-align:center;font-size:13.5px;border-top:6px solid var(--brick)}
+    footer a{color:var(--rust-lt);text-decoration:none}
+
+    @media(max-width:640px){
+      header{padding:11px 18px}
+      .brand svg{height:44px}
+      .masthead{padding:40px 20px 38px}
+      main{padding:10px 20px 62px}
+      .notice{flex-direction:column;gap:13px;padding:22px 20px}
+      ol.rules>li{padding-left:40px}
+    }
+    /* the office will want this on the wall */
+    @media print{
+      body{background:#fff;font-size:11.5pt}
+      body::after,.toc,.back,footer,.masthead{display:none}
+      header{border-bottom:2px solid #000;padding:0 0 10px}
+      main{max-width:none;padding:0}
+      section{padding-top:20px;break-inside:avoid}
+      h2{color:#000}
+      ol.rules>li{padding:8px 0 8px 40px;border-bottom:1px solid #ccc}
+      .notice{border:2px solid #000;background:#fff}
+      .closing{background:#fff;color:#000;border:2px solid #000}
+      .closing h2{color:#000}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="brand" href="index.html" aria-label="Wickfield RV Park — home">
+      <svg viewBox="0 0 400 104" role="img" aria-label="Wickfield RV Park, Stillwater, Oklahoma">
+        <text x="200" y="50" text-anchor="middle" font-family="Alfa,Georgia,serif" font-size="48" fill="#2F3C2C" letter-spacing="2.4">WICKFIELD</text>
+        <polygon points="34,82 128,75 128,87 34,90" fill="#2F3C2C"/>
+        <polygon points="366,82 272,75 272,87 366,90" fill="#2F3C2C"/>
+        <text x="200" y="94" text-anchor="middle" font-family="Alfa,Georgia,serif" font-size="27" fill="#B8571F" letter-spacing="6">RV PARK</text>
+      </svg>
+    </a>
+    <a class="back" href="index.html">← Back to the site</a>
+  </header>
+
+  <div class="masthead">
+    <div class="masthead-inner">
+      <div class="eyebrow">Park Policies</div>
+      <h1>How we keep it quiet, clean and easy</h1>
+      <p>Most of this is what you'd do anyway. It's written down so nobody has to guess, and so a
+         neighbour never has to be the one to bring it up. Staying here means agreeing to it.</p>
+    </div>
+  </div>
+
+  <main>
+    <nav class="toc" aria-label="Policy sections">
+      <a href="#arrival">Arrival &amp; Departure</a>
+      <a href="#site">Your Site</a>
+      <a href="#quiet">Quiet &amp; Speed</a>
+      <a href="#dogs">Dogs</a>
+      <a href="#green">Chipping Green</a>
+      <a href="#septic">Sewer &amp; Septic</a>
+      <a href="#trash">Trash</a>
+      <a href="#safety">Safety</a>
+      <a href="#maintenance">Maintenance &amp; Visitors</a>
+      <a href="#fineprint">The Fine Print</a>
+    </nav>
+
+    <section id="arrival">
+      <h2>Arrival &amp; Departure</h2>
+      <p class="sect-note">Check-in is 3 PM. Check-out is 11 AM.</p>
+      <ol class="rules">
+        <li><b>Need different hours?</b> Ask us. We grant variances when the calendar allows — we just need to know in advance rather than find out at 7 AM.</li>
+        <li><b>Everyone on the site goes on the reservation</b>, and so does every vehicle. Sites can't be sublet, swapped or handed off to someone else.</li>
+        <li><b>Arriving after dark?</b> Tell us and we'll have your site ready and lit for you.</li>
+        <li><b>Leave the site as you found it</b> — level, clean, and clear of anything that wasn't there when you pulled in.</li>
+      </ol>
+    </section>
+
+    <section id="site">
+      <h2>Your Site</h2>
+      <p class="sect-note">Seventy by thirty feet of gravel is plenty of room. The rules here are mostly
+         about keeping it that way for the next guest.</p>
+      <ol class="rules">
+        <li><b>Two vehicles per site overnight.</b> Park on the gravel, never on the grass.<span>Extra vehicles need to be arranged with us ahead of time.</span></li>
+        <li><b>Keep everything inside your own site</b> — awning, chairs, mats, grill, slide-outs and all.</li>
+        <li><b>No tarps.</b> If a rig needs covering, it needs repairing. Tarps shred in Oklahoma wind and they turn a nice row of rigs into a salvage yard.</li>
+        <li><b>Nothing stored under the rig or beneath slide-outs.</b><span>It traps water, invites animals to move in, and it's how a slide-out gets damaged on retraction.</span></li>
+        <li><b>No clotheslines</b> and no laundry hung on the rig, the awning or the fence.</li>
+        <li><b>No mechanical work or rig projects on site.</b> Genuine emergencies and roadside-service calls are the exception — come find us first so we know what's happening.</li>
+        <li><b>Rigs should be road-worthy, self-contained and in reasonable repair.</b><span>We're not asking for new. We are asking that it can leave under its own power and isn't leaking onto the gravel.</span></li>
+      </ol>
+    </section>
+
+    <section id="quiet">
+      <h2>Quiet &amp; Speed</h2>
+      <p class="sect-note">The quiet is the product. It's the main reason people pick this park over a
+         lot in town, and it only works if everybody keeps their end of it.</p>
+      <ol class="rules">
+        <li><b>Quiet hours are 8 PM Sunday through Thursday, and 10 PM Friday and Saturday, until 8 AM.</b></li>
+        <li><b>Quiet hours cover everything that carries</b> — outdoor speakers, televisions, power tools, engines and raised voices. Sound travels a long way across open ground at night.</li>
+        <li><b>Outside of quiet hours, still keep it neighbourly.</b> If it can be heard three sites over, it's too loud.</li>
+        <li><b>The speed limit is 10 MPH everywhere in the park</b>, including the entrance and the gravel between rows. Children and dogs live here.</li>
+        <li><b>No generators.</b> Every site has 50 amp electric included, so there's no reason to run one, and one generator undoes the quiet for the whole park.</li>
+        <li><b>Children stay supervised</b>, particularly near the entrance road, the dog park and the chipping green.</li>
+      </ol>
+    </section>
+
+    <section id="dogs">
+      <h2>Dogs</h2>
+      <p class="sect-note">Dogs are genuinely welcome here — we built them a fenced park of their own.
+         These are the rules that keep them welcome.</p>
+      <ol class="rules">
+        <li><b>Pick up after your dog. Every time, anywhere on the property.</b> This is the one that ends stays.</li>
+        <li><b>Leashed everywhere except inside the fenced dog park.</b></li>
+        <li><b>Don't leave a dog outside unattended</b>, tied out, or alone in the rig if they bark while you're gone.</li>
+        <li><b>Continuous barking or aggressive behaviour means the dog comes inside.</b> If it can't be settled, we'll ask you to make other arrangements.</li>
+        <li><b>In the dog park:</b> latch the gate behind you, stay with your dog, and no food or treats inside the fence.<span>Dogs that don't get along with other dogs are better off walked on a leash.</span></li>
+        <li><b>You're responsible for what your dog does</b>, including damage to sites, hookups and other people's property.</li>
+      </ol>
+    </section>
+
+    <section id="green">
+      <h2>The Chipping Green</h2>
+      <p class="sect-note">It's a chipping green, not a driving range.</p>
+      <ol class="rules">
+        <li><b>Chips and pitches only</b> — no full swings, no drivers, no long irons.</li>
+        <li><b>Look before you hit</b>, and never hit toward the sites, the road or the dog park.</li>
+        <li><b>Collect your balls when you're finished</b> so the mower doesn't find them first.</li>
+        <li><b>Use it at your own risk</b>, and keep an eye on children using it.</li>
+      </ol>
+    </section>
+
+    <section id="septic">
+      <h2>Sewer &amp; Septic</h2>
+      <div class="notice">
+        <div class="notice-ico" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><path d="M32 6 62 56H2z" fill="none" stroke="#B8571F" stroke-width="5" stroke-linejoin="round"/><rect x="29" y="24" width="6" height="15" rx="3"/><circle cx="32" cy="46" r="3.4"/></svg>
+        </div>
+        <div>
+          <h3>We run an aerobic septic system</h3>
+          <p>Live bacteria do the treating here, and they are what keeps sewer service working for all
+             eleven sites. <strong>Formaldehyde-based holding tank deodorizers, bleach and other harsh
+             chemicals kill those bacteria</strong> and take the system down for everybody — not just
+             the site it came from.</p>
+          <p><strong>Use enzyme- or bacteria-based tank treatments only.</strong> Look for "enzyme,"
+             "bio-active" or "septic safe" on the label. Not sure what's already in your tank? Ask us
+             before you dump. We would far rather answer a question than rebuild a septic system.</p>
+        </div>
+      </div>
+      <ol class="rules">
+        <li><b>Enzyme or bacteria-based treatments only.</b> Nothing containing formaldehyde, bleach, solvents or harsh cleaners.</li>
+        <li><b>Use a sewer donut or a threaded seal</b> at the connection. An open, unsealed pipe is an odour problem for the whole row.</li>
+        <li><b>Keep the black tank valve closed</b> until the tank is about two-thirds full, then dump it all at once. Gray water can run.<span>A valve left open drains the liquid and leaves the solids behind, which is how a tank clogs.</span></li>
+        <li><b>Never drain gray or black water onto the ground.</b></li>
+        <li><b>Waste and RV-safe tissue only.</b> No wipes — flushable or otherwise — no grease, no paint, no solvents, no medication.</li>
+        <li><b>No washing rigs or vehicles on site.</b> It's a lot of water going somewhere it shouldn't.</li>
+      </ol>
+    </section>
+
+    <section id="trash">
+      <h2>Trash</h2>
+      <p class="sect-note">Out here, loose trash means raccoons, possums and coyotes — first at your
+         site, then at everyone's.</p>
+      <ol class="rules">
+        <li><b>Any trash kept outside must be in a container with a fitted lid.</b> No loose bags set out overnight, ever.</li>
+        <li><b>Take household trash to the dumpster</b> rather than letting it pile up at your site. Break boxes down.</li>
+        <li><b>Furniture, appliances, tires, batteries, propane bottles and construction debris don't go in our dumpster.</b> Those need a proper disposal run into town.</li>
+        <li><b>Cigarette butts go in a container</b>, never on the gravel or in the grass.</li>
+      </ol>
+    </section>
+
+    <section id="safety">
+      <h2>Safety</h2>
+      <ol class="rules">
+        <li><b>No fireworks</b> anywhere on the property, at any time of year.</li>
+        <li><b>Grills and cooking equipment stay well clear of rigs, awnings and the fence line</b>, and never go unattended while lit.</li>
+        <li><b>Dispose of ashes and coals cold</b>, in a metal container — never in the trash or the grass.</li>
+        <li><b>Firearms are handled in accordance with Oklahoma law.</b> No discharging anything on the property.</li>
+        <li><b>Watch the weather.</b> Oklahoma turns quickly, especially in spring. Know the forecast before you settle in for the night, and keep a weather radio or phone alerts on.</li>
+      </ol>
+    </section>
+
+    <section id="maintenance">
+      <h2>Maintenance &amp; Visitors</h2>
+      <ol class="rules">
+        <li><b>Tell us about problems immediately</b> — a leaking spigot, a warm or sparking power pedestal, a loose sewer connection, a washed-out patch of road, a gate that won't latch.<span>Small things stay small when we hear about them the same day. Call (405) 747-6904 rather than waiting until check-out to mention it.</span></li>
+        <li><b>Don't attempt repairs on park equipment</b> — pedestals, spigots, sewer risers or anything else that isn't yours. Tell us and we'll handle it.</li>
+        <li><b>Day visitors are welcome.</b> Let us know they're coming, keep their vehicle within your two-vehicle allowance, and have them head out by quiet hours.</li>
+        <li><b>Your visitors are your responsibility</b>, and these policies apply to them too.</li>
+      </ol>
+    </section>
+
+    <section id="fineprint">
+      <h2>The Fine Print</h2>
+      <ol class="rules">
+        <li><b>You stay at your own risk.</b> Wickfield RV Park isn't responsible for loss, theft, injury, or damage to rigs, vehicles or belongings, including damage from weather.</li>
+        <li><b>Carry your own insurance</b> on your rig and your vehicles.</li>
+        <li><b>These policies can change.</b> The current version always lives on this page.</li>
+        <li><b>Not following them can end a stay without a refund.</b> That's a last resort and it's rare — in almost every case a short conversation sorts it out, so expect us to come talk to you first.</li>
+      </ol>
+    </section>
+
+    <div class="closing">
+      <h2>When in doubt, just ask</h2>
+      <p>None of this is meant to be heavy-handed. It exists so the park stays the kind of place you'd
+         want to come back to — quiet, tidy, and easy to be at.</p>
+      <p>Anything unclear, or a situation these don't cover? Call <a href="tel:+14057476904">(405) 747-6904</a>
+         or email <a href="mailto:ty.wick@gmail.com">ty.wick@gmail.com</a>. We're on site.</p>
+    </div>
+
+    <p class="updated">Wickfield RV Park · 1919 N Jardot Rd, Stillwater, OK 74075</p>
+  </main>
+
+  <footer>
+    <p><strong style="color:#D9E1D4">Wickfield RV Park</strong> · 1919 N Jardot Rd, Stillwater, OK 74075 · <a href="tel:+14057476904">(405) 747-6904</a></p>
+  </footer>
+
+</body>
+</html>
