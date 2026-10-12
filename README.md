@@ -62,13 +62,15 @@ const FIREFLY = {
 };
 ```
 
-**`bookingOpen: false`** (now) — the top bar and hero say "Opening soon", every call-to-action reads
-"Ask About Dates" and scrolls to the contact form, and the reservations section invites people to
-send their dates.
+**`bookingOpen: true`** (current) — the top bar says "Now taking reservations", every call-to-action
+reads "Book Your Site" / "Check Availability" and routes through the acknowledgement gate to
+Firefly, and the reservations section shows the reserve card.
 
-**`bookingOpen: true`** — the same page says "Now taking reservations", every call-to-action changes
-its wording ("Check Availability", "Book Your Site") and points at the booking path, and the
-reservations section switches to the reserve card. Nothing else needs editing.
+**`bookingOpen: false`** — the top bar and hero say "Opening soon", every call-to-action reads
+"Ask About Dates" and scrolls to the contact form, and the reservations section invites people to
+send their dates. Useful if bookings ever need to be paused.
+
+
 
 The wording for both states lives in the HTML: `data-open-text` on the two "opening soon" phrases,
 and `data-open-label` / `data-open-href` on each button. To reword a button for the open state, edit
@@ -95,7 +97,12 @@ default). `true` loads their calendar in an iframe — check it on the live site
 booking engines send `X-Frame-Options: DENY` and would leave a blank box. If Firefly gives you a
 `<script>` widget snippet instead of a URL, paste it inside `#firefly-frame`.
 
-## Still to do before launch
+## Housekeeping
+
+- **Remove the WiFi notice** once park WiFi is live. It's one block in `index.html` marked
+  `TEMPORARY`, plus a sentence in the WiFi amenity card and one in the WiFi FAQ answer.
+
+## Still to do
 
 Search the file for `TODO`.
 
