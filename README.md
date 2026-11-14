@@ -28,6 +28,7 @@ assets/logo.svg               WICKFIELD / RV PARK lockup, dark — for light bac
 assets/logo-reversed.svg      same lockup in bone — for dark backgrounds
 assets/logo-mark.svg          the field mark alone — favicon and profile pictures
 assets/og-card.png            1200×630 share card, built as the entry sign
+assets/photos/                site photographs (cropped and compressed, ~880 KB total)
 assets/fonts/                 Alfa Slab One + Oswald + Inter, self-hosted (~89 KB)
 robots.txt / sitemap.xml      basic SEO files
 ```
@@ -109,9 +110,9 @@ Search the file for `TODO`.
 - [ ] **Test the contact form** — it posts to Formspree form `xppzrglw`. Formspree needs you to
       confirm the first submission from a new form, so send yourself a test message once the site is
       on a real domain. With the park pre-opening, every call-to-action leads here.
-- [ ] **Photos** — the site is deliberately photo-free (drawn prairie scenes and solid pictograms
-      instead). When photos exist, the natural slots are behind the hero, the illustrated panel in
-      "Built for big rigs", and a new gallery section.
+- [ ] **More photos** — four are in (hero band, the sites panel, the dusk band, the sign). Still
+      missing: the dog park, the chipping green, the fire pit, the storm shelter and an interior
+      shot of a site with a rig's awning out. Those are the five that would earn a gallery section.
 - [ ] **Cabins** — the park plans to add cabins. Nothing on the site mentions them yet. When
       they're close, the cleanest move is probably a second page rather than diluting this one,
       since "Wickfield RV Park" is specifically the RV side of the business.

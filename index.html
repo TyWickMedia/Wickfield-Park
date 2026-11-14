@@ -151,7 +151,7 @@
     .hero{position:relative;background:var(--pine);overflow:hidden}
     .hero-frame{position:absolute;inset:16px;border:2px solid rgba(231,223,198,.35);border-radius:5px;pointer-events:none;z-index:3}
     .hero-frame::before{content:'';position:absolute;inset:5px;border:1px solid rgba(231,223,198,.22);border-radius:3px}
-    .hero-vista{position:absolute;left:0;right:0;bottom:0;width:100%;height:250px;z-index:0}
+    .hero-vista{position:absolute;left:0;right:0;bottom:0;width:100%;height:250px;object-fit:cover;object-position:50% 62%;z-index:0}
     .hero-content{position:relative;z-index:2;max-width:1140px;margin:0 auto;padding:74px 56px 296px}
     .eyebrow{display:inline-block;background:var(--rust);color:var(--bone);font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:7px 16px;border-radius:2px;margin-bottom:26px}
     h1{font-size:clamp(30px,4.35vw,50px);color:var(--bone);letter-spacing:.01em;margin-bottom:22px;text-transform:uppercase}
@@ -190,8 +190,17 @@
     .panel dd{font-size:15px;color:var(--bone);font-weight:600;text-align:right;padding:12px 0;border-bottom:1px solid rgba(231,223,198,.14)}
     .panel dl>:nth-last-child(-n+2){border-bottom:none}
 
-    .vista{border-radius:4px;overflow:hidden;border:2px solid var(--pine)}
-    .vista svg{width:100%;height:auto}
+    .vista{border-radius:4px;overflow:hidden;border:2px solid var(--pine);line-height:0}
+    .vista img{width:100%;height:auto;display:block}
+
+    /* full-width photograph used as a pause between sections */
+    .photoband{position:relative;background:var(--pine-dk);border-top:3px solid var(--rust);border-bottom:3px solid var(--rust)}
+    .photoband img{width:100%;height:430px;object-fit:cover;object-position:50% 56%;display:block}
+    .photoband figcaption{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;
+      padding:0 24px 42px;font-family:'Alfa',Georgia,serif;font-size:clamp(19px,2.6vw,32px);color:var(--bone);
+      text-transform:uppercase;text-align:center;letter-spacing:.01em;
+      text-shadow:0 2px 28px rgba(16,22,14,.9),0 1px 5px rgba(16,22,14,.8)}
+    .arrival-photo{width:100%;height:auto;display:block;border:2px solid var(--pine);border-radius:4px;margin-bottom:20px}
 
     .amenities{background:var(--tan)}
     .amenity-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:46px}
@@ -309,9 +318,11 @@
       .split,.location-inner,.contact-inner{grid-template-columns:1fr;gap:36px}
       .hero-content{padding:56px 30px 250px}
     }
-    @media(max-width:900px){.hero-vista{height:200px}}
+    @media(max-width:900px){.hero-vista{height:200px}.photoband img{height:300px}}
     @media(max-width:768px){
       .hero-vista{height:160px}
+      .photoband img{height:230px}
+      .photoband figcaption{padding-bottom:24px}
       header{padding:11px 18px}
       .brand svg{height:44px}
       .hero-frame{inset:10px}
@@ -438,93 +449,7 @@
 
   <section class="hero" id="top">
     <div class="hero-frame" aria-hidden="true"></div>
-    <svg class="hero-vista" viewBox="0 0 1440 340" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-      <defs>
-        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#DED5B8"/><stop offset="0.62" stop-color="#E9E1C7"/><stop offset="1" stop-color="#E2DCBE"/>
-        </linearGradient>
-        <linearGradient id="fld" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#8E8F52"/><stop offset="1" stop-color="#6E7442"/>
-        </linearGradient>
-        <clipPath id="fr"><rect width="1440" height="340"/></clipPath>
-      </defs>
-      <g clip-path="url(#fr)">
-        <rect width="1440" height="340" fill="url(#sky)"/>
-    
-        <!-- clouds -->
-        <g fill="#F1EAD4" opacity=".85">
-          <ellipse cx="330" cy="86" rx="132" ry="26"/><ellipse cx="410" cy="72" rx="86" ry="22"/><ellipse cx="248" cy="78" rx="70" ry="18"/>
-          <ellipse cx="900" cy="62" rx="150" ry="24"/><ellipse cx="820" cy="52" rx="84" ry="19"/><ellipse cx="1010" cy="52" rx="92" ry="18"/>
-          <ellipse cx="1300" cy="96" rx="118" ry="20"/>
-        </g>
-    
-        <!-- far tree line -->
-        <g fill="#7C8A62" opacity=".75">
-          <path d="M0 172 q26-24 52-4 q22-26 48-6 q30-30 60-4 q26-22 52-2 q30-26 58-2 q28-24 56-4 q30-28 62-2 q26-20 54-4 q32-26 62-2 q28-22 56-2 q30-26 60-2 q26-20 52-2 q30-24 58-2 q28-20 56-2 q30-24 60-2 q26-18 52-2 q28-22 56-2 q30-24 60 0 q26-18 52 2 q28-20 56 0 L1440 190 L0 190 Z"/>
-        </g>
-        <!-- nearer tree clumps -->
-        <g fill="#556B3E">
-          <ellipse cx="120" cy="182" rx="46" ry="20"/><ellipse cx="196" cy="186" rx="34" ry="15"/>
-          <ellipse cx="470" cy="184" rx="40" ry="17"/><ellipse cx="536" cy="188" rx="30" ry="13"/>
-          <ellipse cx="760" cy="182" rx="44" ry="18"/>
-          <ellipse cx="1092" cy="170" rx="52" ry="30"/><ellipse cx="1140" cy="180" rx="40" ry="22"/>
-          <ellipse cx="1390" cy="168" rx="56" ry="32"/><ellipse cx="1338" cy="182" rx="38" ry="20"/>
-        </g>
-    
-        <!-- barn -->
-        <g transform="translate(1178 118)">
-          <path d="M0 44 L44 16 L88 44 L88 100 L0 100 Z" fill="#6B4630"/>
-          <path d="M-6 46 L44 12 L94 46 L88 52 L44 24 L0 52 Z" fill="#4A3222"/>
-          <rect x="30" y="62" width="28" height="38" fill="#3A2A1E"/>
-          <path d="M30 62 h28 v38 h-28 z M44 62 v38 M30 78 h28" stroke="#5B3E2A" stroke-width="2.5" fill="none"/>
-          <rect x="8" y="58" width="12" height="12" fill="#3A2A1E"/>
-          <rect x="68" y="58" width="12" height="12" fill="#3A2A1E"/>
-        </g>
-        <!-- windmill -->
-        <g transform="translate(1288 96)" stroke="#4A4A38" fill="none">
-          <path d="M8 122 L16 34 M32 122 L24 34 M12 96 h16 M14 74 h12 M16 54 h8" stroke-width="2.6"/>
-          <g transform="translate(20 30)" fill="#4A4A38" stroke="none">
-            <circle r="3.4"/>
-            <g opacity=".95">
-              <path d="M0 0 L18 -7 L18 7 Z"/><path d="M0 0 L-18 7 L-18 -7 Z"/>
-              <path d="M0 0 L7 -18 L-7 -18 Z"/><path d="M0 0 L-7 18 L7 18 Z"/>
-              <path d="M0 0 L14 12 L4 17 Z"/><path d="M0 0 L-14 -12 L-4 -17 Z"/>
-              <path d="M0 0 L12 -14 L17 -4 Z"/><path d="M0 0 L-12 14 L-17 4 Z"/>
-            </g>
-          </g>
-          <path d="M14 34 L26 34" stroke-width="2.6"/>
-        </g>
-    
-        <!-- fields -->
-        <rect y="190" width="1440" height="150" fill="url(#fld)"/>
-        <path d="M0 214 q180-16 360 0 t360 0 t360 0 t360 0 L1440 340 L0 340 Z" fill="#7B7F49" opacity=".55"/>
-        <path d="M0 250 q240-18 480 2 t480 -2 t480 4 L1440 340 L0 340 Z" fill="#65703E"/>
-        <path d="M0 296 q300-16 600 4 t840 -6 L1440 340 L0 340 Z" fill="#4F5E33"/>
-    
-        <!-- fence: rails + posts -->
-        <g>
-          <rect y="222" width="1440" height="7" fill="#5A4630"/>
-          <rect y="248" width="1440" height="7" fill="#4E3D2A"/>
-          <g fill="#3F3122">
-            <rect x="40"  y="204" width="12" height="66" rx="1"/><rect x="238" y="204" width="12" height="66" rx="1"/>
-            <rect x="436" y="204" width="12" height="66" rx="1"/><rect x="634" y="204" width="12" height="66" rx="1"/>
-            <rect x="832" y="204" width="12" height="66" rx="1"/><rect x="1030" y="204" width="12" height="66" rx="1"/>
-            <rect x="1228" y="204" width="12" height="66" rx="1"/><rect x="1400" y="204" width="12" height="66" rx="1"/>
-          </g>
-        </g>
-    
-        <!-- birds -->
-        <g stroke="#3B3A28" stroke-width="2.6" fill="none" stroke-linecap="round">
-          <path d="M300 70 q9-8 18 0 q9-8 18 0"/>
-          <path d="M366 92 q6-5 12 0 q6-5 12 0"/>
-        </g>
-        <!-- bird on post -->
-        <g transform="translate(238 190)" fill="#3B3A28">
-          <ellipse cx="6" cy="8" rx="8" ry="5.4"/><circle cx="13.5" cy="3.6" r="3.6"/>
-          <path d="M17 3 l5 1.4 l-5 1.4 z"/><path d="M-1 9 l-8 3 l7-5 z"/>
-        </g>
-      </g>
-    </svg>
+    <img class="hero-vista" src="assets/photos/hero-park.jpg" alt="Wickfield RV Park at golden hour — rigs parked along the gravel row with open field and treeline beyond" width="2000" height="621" fetchpriority="high">
     <div class="hero-content">
       <div class="eyebrow"><span class="pip"></span> <span data-open-text="Now Booking · Stillwater, Oklahoma">Opening Soon · Stillwater, Oklahoma</span></div>
       <h1>Room Enough to Spread Out.<br><em>Quiet Enough to Stay.</em></h1>
@@ -635,25 +560,7 @@
   <div class="section fade-in" id="sites">
     <div class="split">
       <div class="vista">
-        <svg viewBox="0 0 640 440" role="img" aria-label="Illustration of a pull-through site road running toward the horizon">
-          <rect width="640" height="440" fill="#E9E1C7"/>
-          <ellipse cx="300" cy="72" rx="118" ry="22" fill="#F1EAD4"/>
-          <ellipse cx="372" cy="60" rx="76" ry="18" fill="#F1EAD4"/>
-          <circle cx="452" cy="140" r="52" fill="#B8571F" opacity=".92"/>
-          <path d="M0 196 q34-22 68-4 q30-24 62-4 q34-26 70-2 q32-20 66-2 q36-24 72-2 q30-18 64-2 q36-22 72 0 q30-16 62 2 q28-14 56 0 L640 240 L0 240 Z" fill="#7C8A62" opacity=".8"/>
-          <g fill="#556B3E">
-            <ellipse cx="70" cy="214" rx="44" ry="19"/><ellipse cx="132" cy="220" rx="30" ry="13"/>
-            <ellipse cx="560" cy="210" rx="46" ry="20"/><ellipse cx="612" cy="220" rx="32" ry="14"/>
-          </g>
-          <rect y="228" width="640" height="212" fill="#6E7442"/>
-          <path d="M0 258 q160-14 320 2 t320 -4 L640 440 L0 440 Z" fill="#65703E"/>
-          <path d="M0 310 q200-16 400 6 t240 -10 L640 440 L0 440 Z" fill="#4F5E33"/>
-          <path d="M292 300 L348 300 L486 440 L154 440 Z" fill="#C9B98F"/>
-          <path d="M320 314 v22 M320 356 v28 M320 404 v32" stroke="#B8571F" stroke-width="8" stroke-linecap="round"/>
-          <g fill="#4E3D2A"><rect x="34" y="250" width="9" height="46" rx="1"/><rect x="130" y="250" width="9" height="46" rx="1"/><rect x="500" y="250" width="9" height="46" rx="1"/><rect x="596" y="250" width="9" height="46" rx="1"/></g>
-          <rect x="30" y="262" width="115" height="5" fill="#5A4630"/><rect x="496" y="262" width="115" height="5" fill="#5A4630"/>
-          <g stroke="#3B3A28" stroke-width="2.6" fill="none" stroke-linecap="round"><path d="M120 96 q8-7 16 0 q8-7 16 0"/><path d="M176 118 q6-5 12 0 q6-5 12 0"/></g>
-        </svg>
+        <img src="assets/photos/sites.jpg" alt="Gravel pull-through sites at Wickfield RV Park, showing the width between rigs and the hookup pedestals" width="1500" height="1042" loading="lazy">
       </div>
       <div>
         <div class="section-label">The Sites</div>
@@ -671,6 +578,11 @@
       </div>
     </div>
   </div>
+
+  <figure class="photoband">
+    <img src="assets/photos/dusk.jpg" alt="Two lit trailers at Wickfield RV Park under a deep blue evening sky" width="2000" height="635" loading="lazy">
+    <figcaption>Eight o'clock on a Tuesday.</figcaption>
+  </figure>
 
   <div class="gameday">
     <div class="gameday-inner fade-in">
@@ -890,13 +802,16 @@
         </ul>
         <a class="btn btn-outline btn-lg" href="https://www.google.com/maps/dir/?api=1&destination=1919+N+Jardot+Rd,+Stillwater,+OK+74075" target="_blank" rel="noopener">Get Directions</a>
       </div>
-      <div class="map-wrap fade-in">
+      <div class="fade-in">
+        <img class="arrival-photo" src="assets/photos/sign-night.jpg" alt="The lit Wickfield RV Park entrance sign on N Jardot Rd at night" width="1300" height="867" loading="lazy">
+      <div class="map-wrap">
         <iframe
           title="Map to Wickfield RV Park, 1919 N Jardot Rd, Stillwater, OK"
           src="https://www.google.com/maps?q=1919+N+Jardot+Rd,+Stillwater,+OK+74075&output=embed"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           allowfullscreen></iframe>
+      </div>
       </div>
     </div>
   </div>
