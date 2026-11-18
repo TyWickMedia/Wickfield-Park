@@ -5,8 +5,8 @@ Marketing site for **Wickfield RV Park**, at 1919 N Jardot Rd, Stillwater, OK.
 The design mirrors the park's entry sign: dark pine field, bone and rust palette, heavy woodtype
 slab headings, condensed gothic labels, solid pictograms and a drawn prairie horizon.
 
-11 oversized pull-through sites · full hookups (water, sewer, 50 amp) · free WiFi · dog park · chipping green ·
-$60 a night · $250 a week · $500 a month · reservations through Firefly.
+11 gravel pull-through sites, 70 × 30 ft · full hookups (water, sewer, 50 amp) · free WiFi · dog park · storm shelter ·
+$50 a night · $250 a week · $500 a month · reservations through Firefly.
 
 ## Stack
 
@@ -111,8 +111,8 @@ Search the file for `TODO`.
       confirm the first submission from a new form, so send yourself a test message once the site is
       on a real domain. With the park pre-opening, every call-to-action leads here.
 - [ ] **More photos** — four are in (hero band, the sites panel, the dusk band, the sign). Still
-      missing: the dog park, the chipping green, the fire pit, the storm shelter and an interior
-      shot of a site with a rig's awning out. Those are the five that would earn a gallery section.
+      missing: the dog park, the fire pit, the storm shelter and a shot of a site with a rig's
+      awning out. Those are the five that would earn a gallery section.
 - [ ] **Cabins** — the park plans to add cabins. Nothing on the site mentions them yet. When
       they're close, the cleanest move is probably a second page rather than diluting this one,
       since "Wickfield RV Park" is specifically the RV side of the business.
